@@ -1,0 +1,244 @@
+::-webkit-scrollbar {
+  background-color: #0E0E0E;
+}
+* {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      vertical-align: baseline;
+      font-size: 100%;
+}
+html {
+      font-family: Poppins;
+}
+body {
+      width: 100%;
+      background: #0E0E0E;
+      overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+/* Navigation */
+nav {
+  position: fixed;
+  left: 0;
+  background-color: white;
+  width: 25vw;
+  height: 100vh;
+  transform: translateX(-25vw);
+  transition: transform 700ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  font-size: 150%;
+  color: black;
+
+}
+nav.visible{
+  transform: translateX(0);
+}
+.home, .about, .projects{
+    transform: translateX(-70vw);
+}
+nav.visible .home{
+    transform: translateX(0);
+    transition: ease 1.5s;
+}
+nav.visible .about{
+    transform: translateX(0);
+    transition: ease 2s;
+}
+nav.visible .projects{
+    transform: translateX(0);
+    transition: ease 2.5s;
+}
+nav a{
+  color: black;
+}
+/* Burger menu */
+.menu{
+    position: fixed;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu .line-wrapp{
+	width: 40;
+	height: 40px;
+}
+.menu .line{
+	width: 40px;
+	height: 5px;
+	background-color: white;
+  margin: 7px 0;
+  transition: transform 700ms;
+}
+.menu.active .line.top{
+	transform: translateX(0px) translateY(6px) rotate(45deg);
+  transition: transform 700ms;
+  background-color: #0E0E0E;
+}
+.menu.active .line.middle{
+	transform: translateX(0px) translateY(-6px) rotate(-45deg);
+  transition: transform 700ms;
+  background-color: #0E0E0E;
+}
+.menu.active .line.bottom{
+  opacity: 0;
+  transition: transform 700ms;
+}
+.wrapper {
+      width: 90%;
+      margin: 0 auto;
+}
+.navBar::after {
+      content: "";
+      clear: both;
+      display: table;
+}
+/* texte */
+h1 {
+      color: #fff;
+      font-size: 48px;
+}
+
+p {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 300;
+}
+/* nav */
+nav {
+      line-height: 70px;
+}
+nav a img {
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+}
+nav a:nth-child(2) {
+      float: right;
+}
+
+/* header */
+.text {
+      margin: 100px 0 200px 120px;
+}
+.text p {
+      width: 60%;
+      margin-top: 10px;
+}
+
+/* projets */
+.projet {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project__item {
+  position: relative;
+  width: 45%;
+  margin-bottom: 20px;
+
+}
+
+.project__item .img__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+.project__item .img__layer h2{
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+.project__item .img__layer p{
+  margin-bottom: 15px;
+  margin-left: 15px;
+  text-align: left;
+}
+.project__item .img__layer {
+  background-color: #393939;
+}
+.project__item .img__layer:hover {
+  opacity: 0.5;
+}
+.project__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.phone{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.ordi{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.lp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.terr{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120%;
+  margin-bottom: 0px;
+}
+/* footer */
+footer p {
+      text-align: center;
+      color: grey;
+      margin: 60px auto;
+}
+
+/* Responsive */
+@media only screen and (max-width: 991px) {
+      header {
+            text-align: left;
+            margin: 100px 0 100px 30px;
+      }
+      header h1 {
+            font-size: 36px;
+      }
+      header p {
+            font-size: 12px;
+            width: 90%;
+      }
+      .work img {
+            margin: 2%;
+            width: 90%;
+      }
+}
